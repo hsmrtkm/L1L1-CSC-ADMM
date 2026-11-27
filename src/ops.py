@@ -11,7 +11,7 @@ CSC で使う基本演算(FFT による畳み込み D とその随伴 Dᵀ、ソ
 import torch
 
 
-def filters_to_fft(filters: torch.Tensor, H: int, W: int) -> torch.Tensor:
+def filters_to_fft(filters:torch.Tensor, H: int, W: int) -> torch.Tensor:
     """フィルタを画像サイズまでゼロ埋めし、中心を原点に移してから FFT する。
 
     中心を原点 (0, 0) に移さないと、再構成画像が半フィルタ分ずれる。
